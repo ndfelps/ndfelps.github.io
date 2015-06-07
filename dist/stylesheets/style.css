@@ -13,16 +13,14 @@ header {
 	color: white;
 	text-align: center;
 	overflow: hidden;
-	padding-top: 1.5%
+	padding-top: 1.5%;
+	padding-bottom: .5%;
 }
 #side {
-	height: 90%;
+	height: 93%;
 	background-color: rgb(100, 100, 100);
 	width: 20%;	
 	float: left;
-}
-#username{
-
 }
 #message {
 	width: 70%;
@@ -64,6 +62,29 @@ a {
 .active {
 	background-color: black !important;
 }
+#loginArea, #signoutBox {
+	padding-top: 15%;
+	margin-left: 50%;
+	border: none;
+}
+#signIn, #signOut {
+	text-align: center;
+	vertical-align: center;
+	margin-top: 3px;
+	margin-left: 30px;
+	font-size: 20px;
+	background-color: rgb(240, 115, 101);
+	border: none;
+	color: white;
+	border-radius: 4px;
+	padding: 8px;
+}
+#signOut {
+	background-color: black;
+}
+#signIn:hover, #signOut:hover {
+	cursor: pointer;
+}
 #leadDrop:hover {
 	cursor: pointer;
 }
@@ -93,4 +114,21 @@ li:hover {
 	font-size: 8px;
 	font-style: italic;
 	float: right;
+}
+#message {
+	height: 20px;
+	background-color: lightgrey;
+	border-radius: 8px;
+	margin-top: 3px;
+	margin-left: 3px;
+}
+#submitButton {
+	font-size: 16px;
+	background-color: rgb(128, 173, 32);
+	border: none;
+	margin-top: 3px;
+	border-radius: 8px;
+}
+.chatBox {
+	background-color: lightgrey;
 }

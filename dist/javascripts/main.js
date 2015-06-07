@@ -201,17 +201,7 @@ function start() {
 						'https://morning-reef-8611.herokuapp.com/trainers',
 						myMessage
 					);
-					if (chatBot(myMessage.message) !== undefined) {
-						botMess = {
-							name: 'HelpBot',
-							message: chatBot(myMessage.message),
-							badge: (window.location.hash).substring(1)
-						}
-						$.post(
-							'https://morning-reef-8611.herokuapp.com/trainers',
-							botMess
-						);
-					}
+					setInterval(chatBot2(myMessage.message), 1000);
 					$('#message').val('');
 				}
 			}
@@ -324,6 +314,20 @@ function start() {
 			return response.res1;
 		} else {
 			return undefined;
+		}
+	}
+
+	function chatBot2 (mess) {
+		if (chatBot(mess) !== undefined) {
+			botMess = {
+				name: 'HelpBot',
+				message: chatBot(mess),
+				badge: (window.location.hash).substring(1)
+			}
+			$.post(
+				'https://morning-reef-8611.herokuapp.com/trainers',
+				botMess
+			);
 		}
 	}
 
