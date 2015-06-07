@@ -69,10 +69,11 @@ a {
 }
 .leaderDrop {
 	display: none;
-	position: fixed;
+	position: absolute;
 	background-color: rgb(39, 70, 100);
 	left: 5%;
-	top: 6.9%;
+	top: 7.4%;
+	width: 10%;
 	padding-right: 40px;
 }
 ul {
