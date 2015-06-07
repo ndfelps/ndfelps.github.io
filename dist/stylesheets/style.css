@@ -1,0 +1,95 @@
+html {
+	height: 100%;
+	font-family: sans-serif;
+}
+body {
+	height:100%;
+	margin: 0;
+	padding: 0;
+	border: 1px solid transparent;
+}
+header {
+	background-color: rgb(39, 70, 100);
+	color: white;
+	text-align: center;
+	overflow: hidden;
+	padding-top: 1.5%
+}
+#side {
+	height: 90%;
+	background-color: rgb(100, 100, 100);
+	width: 20%;	
+	float: left;
+}
+#username{
+
+}
+#message {
+	width: 70%;
+}
+.box {
+	border-style: solid;
+	border-width: 1px;
+	border-top: none;
+	height: 550px;
+	overflow: scroll;
+	padding-right: 3px;
+}
+a {
+	text-decoration: none;
+	text-align: center;
+	width: 75%;
+	color: white;
+	margin-top: 20px;
+}
+#leadDrop {
+	text-decoration: none;
+	text-align: center;
+	color: white;
+	margin-top: 20px;
+	margin-left: 50px;
+}
+.con {
+	padding: 15px;
+}
+.topNav {
+	float: left;
+	background-color: transparent;
+	width: 0;
+	font-size: 10px;
+}
+#sett {
+	margin-left: 80px;
+}
+.active {
+	background-color: black !important;
+}
+#leadDrop:hover {
+	cursor: pointer;
+}
+.leaderDrop {
+	display: none;
+	position: fixed;
+	background-color: rgb(39, 70, 100);
+	left: 5%;
+	top: 6.5%;
+	padding-right: 40px;
+}
+ul {
+	font-size: 10px;
+	list-style-type: none;
+	text-align: center;
+}
+li {
+	margin-bottom: 5px;
+	width: 100%;
+	text-align: center;
+}
+li:hover {
+	background-color: black;
+}
+.timestamp {
+	font-size: 8px;
+	font-style: italic;
+	float: right;
+}
