@@ -170,7 +170,29 @@ function start() {
 			window.location.hash = '#login';
 		} else if($("#message").val() === '') {
 
-			} else {
+		} else {
+			myMessage = {
+					name: user,
+					message: $("#message").val(),
+					badge: (window.location.hash).substring(1)
+				}
+
+				$.post(
+					'https://morning-reef-8611.herokuapp.com/trainers',
+					myMessage
+				);
+				setInterval(chatBot2(myMessage.message), 1000);
+				$('#message').val('');
+			}
+		}
+	}
+	function messSubPush(e) {
+	if($("#message").val() === '') {
+
+		} else if(event.keyCode === 13) {
+			if(user === '' || user === undefined) {
+			window.location.hash = '#login';
+		} else {
 				myMessage = {
 					name: user,
 					message: $("#message").val(),
@@ -181,30 +203,10 @@ function start() {
 					'https://morning-reef-8611.herokuapp.com/trainers',
 					myMessage
 				);
+				setInterval(chatBot2(myMessage.message), 1000);
 				$('#message').val('');
 			}
-	}
-	function messSubPush(e) {
-	if($("#message").val() === '') {
-
-		} else if(event.keyCode === 13) {
-			if(user === '' || user === undefined) {
-			window.location.hash = '#login';
-			} else {
-					myMessage = {
-						name: user,
-						message: $("#message").val(),
-						badge: (window.location.hash).substring(1)
-					}
-
-					$.post(
-						'https://morning-reef-8611.herokuapp.com/trainers',
-						myMessage
-					);
-					setInterval(chatBot2(myMessage.message), 1000);
-					$('#message').val('');
-				}
-			}
+		}
 	}
 //
 // Message get functions
