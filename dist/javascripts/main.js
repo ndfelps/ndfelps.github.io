@@ -236,6 +236,7 @@ function start() {
 //
 // Leaderboard get functions
 	function getUser () {
+		console.log(1);
 		$.get(
 			'https://morning-reef-8611.herokuapp.com/trainers/leaderboard',
 			onUsersReceived,
@@ -243,6 +244,7 @@ function start() {
 		);
 	}
 	function onUsersReceived (val) {
+		console.log(2);
 		$('#chatLeaders').html('')
 		for(var i = 0; i<val.length; i++) {
 			$('#chatLeaders').append(i+1+'. ' + val[i] + '<br>');
