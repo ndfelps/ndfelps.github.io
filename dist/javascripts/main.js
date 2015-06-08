@@ -171,19 +171,19 @@ function start() {
 		} else if($("#message").val() === '') {
 
 		} else {
-			myMessage = {
-					name: user,
-					message: $("#message").val(),
-					badge: (window.location.hash).substring(1)
-				}
-
-				$.post(
-					'https://morning-reef-8611.herokuapp.com/trainers',
-					myMessage
-				);
-				setInterval(chatBot2(myMessage.message), 1000);
-				$('#message').val('');
+		myMessage = {
+				name: user,
+				message: $("#message").val(),
+				badge: (window.location.hash).substring(1)
 			}
+
+			$.post(
+				'https://morning-reef-8611.herokuapp.com/trainers',
+				myMessage
+			);
+			setInterval(chatBot2(myMessage.message), 1000);
+			$('#message').val('');
+			
 		}
 	}
 	function messSubPush(e) {
@@ -238,7 +238,6 @@ function start() {
 //
 // Leaderboard get functions
 	function getUser () {
-		console.log(1);
 		$.get(
 			'https://morning-reef-8611.herokuapp.com/trainers/leaderboard',
 			onUsersReceived,
@@ -246,7 +245,6 @@ function start() {
 		);
 	}
 	function onUsersReceived (val) {
-		console.log(2);
 		$('#chatLeaders').html('')
 		for(var i = 0; i<val.length; i++) {
 			$('#chatLeaders').append(i+1+'. ' + val[i] + '<br>');
